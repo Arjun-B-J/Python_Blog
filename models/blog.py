@@ -3,7 +3,6 @@ import datetime
 from common.database import Database
 from models.post import Post
 
-__author__ = 'jslvtr'
 
 
 class Blog(object):

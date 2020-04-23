@@ -6,8 +6,8 @@ from models.user import User
 
 from flask import Flask, render_template, request, session, make_response
 
-app = Flask(__name__)  # '__main__'
-app.secret_key = "jose"
+app = Flask(__name__) 
+app.secret_key = "kjsdf;sdfjsdo;jf;osdjfsjvkdsjv[odfhv[odfhbvijlkbjkdvbh;dbvdfjvjdlahnvpjdhzji;vbzhdpiv"
 
 
 @app.route('/')
