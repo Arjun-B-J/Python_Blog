@@ -1,6 +1,5 @@
-import pymongo
 
-__author__ = 'jslvtr'
+import pymongo
 
 
 class Database(object):
