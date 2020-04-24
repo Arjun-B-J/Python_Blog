@@ -39,8 +39,8 @@ def login_user():
         User.login(email)
     else:
         session['email'] = None
-
-    return render_template("user_blogs.html", email=session['email'])
+    user = User.get_by_email(session['email'])
+    return make_response(user_blogs(user._id))
 
 
 @app.route('/auth/register', methods=['POST'])
