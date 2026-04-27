@@ -1,3 +1,5 @@
+import os
+
 from common.database import Database
 from models.blog import Blog
 from models.post import Post
@@ -6,8 +8,8 @@ from models.user import User
 
 from flask import Flask, render_template, request, session, make_response
 
-app = Flask(__name__) 
-app.secret_key = "kjsdf;sdfjsdo;jf;osdjfsjvkdsjv[odfhv[odfhbvijlkbjkdvbh;dbvdfjvjdlahnvpjdhzji;vbzhdpiv"
+app = Flask(__name__)
+app.secret_key = os.environ.get('FLASK_SECRET_KEY') or os.urandom(64)
 
 
 @app.route('/')

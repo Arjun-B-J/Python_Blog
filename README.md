@@ -50,6 +50,10 @@ Data is stored in three MongoDB collections: `users`, `blogs`, `posts`, inside a
 
    The server starts on `http://127.0.0.1:4995` in debug mode.
 
+## Configuration
+
+- `FLASK_SECRET_KEY`: Set this environment variable in production to a strong, random secret used to sign Flask session cookies. If unset (e.g. during local development), the app falls back to a random per-process key generated via `os.urandom(64)`, which means existing sessions are invalidated on each restart. Always set `FLASK_SECRET_KEY` in production so sessions persist across restarts.
+
 ## Usage
 
 - Visit `/register` to create an account.
